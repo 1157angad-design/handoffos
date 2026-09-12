@@ -1,6 +1,9 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { AuthProvider } from '@/lib/auth'
+import { ArchitectChat } from '@/components/architect-chat'
+import { DashboardSearch } from '@/components/dashboard-search'
 import '../styles.css'
+import '../enhancements.css'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -31,7 +34,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <AuthProvider>{children}</AuthProvider>
+        <AuthProvider>{children}<ArchitectChat /><DashboardSearch /></AuthProvider>
         <Scripts />
       </body>
     </html>
