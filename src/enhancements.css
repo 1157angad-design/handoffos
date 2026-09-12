@@ -1,0 +1,221 @@
+.dashboard-search-trigger {
+  position: fixed;
+  z-index: 35;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-25%);
+  width: 360px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #1c3a53;
+  border-radius: 7px;
+  background: #06111c;
+  color: #688197;
+  font-size: 9px;
+  text-align: left;
+}
+.dashboard-search-trigger svg {
+  width: 14px;
+}
+.dashboard-search-trigger kbd {
+  margin-left: auto;
+  color: #526b80;
+}
+.search-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(0, 5, 12, 0.78);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  padding-top: 11vh;
+}
+.search-dialog {
+  width: min(620px, calc(100vw - 28px));
+  height: max-content;
+  max-height: 70vh;
+  border: 1px solid #285174;
+  border-radius: 13px;
+  background: #07131f;
+  overflow: hidden;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.7);
+}
+.search-dialog header {
+  height: 58px;
+  display: grid;
+  grid-template-columns: 25px 1fr 30px;
+  align-items: center;
+  padding: 0 15px;
+  border-bottom: 1px solid #183149;
+}
+.search-dialog header svg {
+  width: 17px;
+  color: #6695ba;
+}
+.search-dialog input {
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: white;
+  outline: 0;
+  font-size: 13px;
+}
+.search-dialog header button {
+  border: 0;
+  background: transparent;
+  color: #6d8598;
+}
+.search-dialog > div {
+  max-height: 55vh;
+  overflow: auto;
+  padding: 8px;
+}
+.search-dialog a {
+  display: block;
+  padding: 11px 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+.search-dialog a:hover {
+  background: #0c2234;
+  border-color: #234761;
+}
+.search-dialog a strong,
+.search-dialog a small {
+  display: block;
+}
+.search-dialog a strong {
+  font-size: 10px;
+}
+.search-dialog a small {
+  font-size: 8px;
+  color: #698197;
+  margin-top: 4px;
+}
+.search-empty {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #607a90;
+}
+.search-empty svg {
+  width: 28px;
+}
+.search-empty strong {
+  font-size: 12px;
+  color: #b3c3d0;
+  margin-top: 12px;
+}
+.search-empty span {
+  font-size: 8px;
+  margin-top: 6px;
+}
+.integration-process {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  border: 1px solid #1b3b55;
+  border-radius: 11px;
+  background: #07131f;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.integration-process nav {
+  padding: 12px;
+  border-right: 1px solid #183149;
+  background: #06101a;
+}
+.integration-process nav button {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  background: transparent;
+  color: #71879a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  font-size: 9px;
+}
+.integration-process nav i {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #26445d;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+}
+.integration-process nav button.active {
+  color: #fff;
+}
+.integration-process nav button.active i {
+  border-color: #458ff1;
+  background: #174b85;
+}
+.integration-process nav button.done i {
+  border-color: #4acb76;
+  color: #64dd8a;
+}
+.integration-process > section {
+  padding: 28px;
+}
+.integration-process > section > span {
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: #5a95c8;
+}
+.integration-process h2 {
+  font-size: 20px;
+  margin: 8px 0;
+}
+.integration-process p,
+.integration-process small {
+  display: block;
+  color: #748b9f;
+  font-size: 9px;
+}
+.integration-process section > .button {
+  margin-top: 22px;
+  margin-right: 8px;
+}
+.setup-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 18px;
+}
+.setup-options label {
+  font-size: 8px;
+  color: #7d93a6;
+}
+.setup-options select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+}
+@media (max-width: 760px) {
+  .dashboard-search-trigger {
+    position: absolute;
+    top: 70px;
+    left: 12px;
+    right: 12px;
+    transform: none;
+    width: calc(100% - 24px);
+  }
+  .integration-process {
+    grid-template-columns: 1fr;
+  }
+  .integration-process nav {
+    border-right: 0;
+    border-bottom: 1px solid #183149;
+  }
+  .setup-options {
+    grid-template-columns: 1fr;
+  }
+}

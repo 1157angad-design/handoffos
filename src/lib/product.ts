@@ -1,0 +1,63 @@
+export const pricingPlans = [
+  {
+    id: "free-trial",
+    name: "Free Trial",
+    handoffs: "150",
+    limit: 150,
+    price: "₹0",
+    monthlyPriceCents: 0,
+    note: "Explore the complete handoff workflow.",
+  },
+  {
+    id: "standard",
+    name: "Standard",
+    handoffs: "2,500",
+    limit: 2500,
+    price: "₹1,999",
+    monthlyPriceCents: 199900,
+    note: "For teams launching their first integration.",
+  },
+  {
+    id: "pro",
+    name: "Pro",
+    handoffs: "8,000",
+    limit: 8000,
+    price: "₹6,999",
+    monthlyPriceCents: 699900,
+    note: "For growing support and product teams.",
+  },
+  {
+    id: "advanced",
+    name: "Advanced",
+    handoffs: "12,000",
+    limit: 12000,
+    price: "₹9,999",
+    monthlyPriceCents: 999900,
+    note: "For higher-volume customer operations.",
+  },
+  {
+    id: "business",
+    name: "Business",
+    handoffs: "30,000",
+    limit: 30000,
+    price: "₹27,999",
+    monthlyPriceCents: 2799900,
+    note: "For multi-team production operations.",
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise",
+    handoffs: "Unlimited",
+    limit: 2147483647,
+    price: "₹69,999",
+    monthlyPriceCents: 6999900,
+    note: "Unlimited handoffs plus customisation.",
+  },
+] as const;
+
+export const integrationOptions = [
+  "Webhooks",
+  "Slack",
+  "Zendesk",
+  "Intercom",
+] as const;
